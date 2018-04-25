@@ -80,7 +80,7 @@ class Crawler:
         return
 
     # 开始获取
-    def get_images(self, word='美女'):
+    def get_images(self, word='狗'):
         search = urllib.parse.quote(word)
         # pn int 图片数
         pn = self.__start_amount
@@ -132,5 +132,5 @@ if __name__ == '__main__':
     crawler = Crawler(0.05)  # 抓取延迟为 0.05
 
     # crawler.start('美女', 10, 2)  # 抓取关键词为 “美女”，总数为 1 页（即总共 1*60=60 张），开始页码为 2
-    crawler.start('二次元 美女', 10, 1)  # 抓取关键词为 “二次元 美女”，总数为 10 页（即总共 10*60=600 张），起始抓取的页码为 1
+    crawler.start('狗', 10, 1)  # 抓取关键词为 “二次元 美女”，总数为 10 页（即总共 10*60=600 张），起始抓取的页码为 1
     # crawler.start('帅哥', 5)  # 抓取关键词为 “帅哥”，总数为 5 页（即总共 5*60=300 张）
